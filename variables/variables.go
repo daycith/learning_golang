@@ -4,7 +4,7 @@ import "fmt"
 
 func UseVariables() {
 	var msg string
-	msg = "Hello"
+	msg = "Hellow world 1"
 
 	fmt.Println("Variable msg => " + msg)
 
