@@ -8,7 +8,7 @@ func UseVariables() {
 
 	fmt.Println("Variable msg => " + msg)
 
-	msg2 := "Hello 2"
+	msg2 := "Hello world 2"
 
 	fmt.Println("Variable msg 2 => " + msg2)
 }
