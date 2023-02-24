@@ -21,7 +21,7 @@ Another way is to use the operator :=, which allows to declare and initialize a 
 msg2 := "Hello world 2"
 ```
 
-If we don't use both variables, the compilator will throw an error (Yes, is against dead code!), so lets simply print them on the console
+If we don't use both variables, the compilator will throw an error (Yes, go is against dead code!), so lets simply print them on the console
 
 ```go
 fmt.Printf("Variable msg => %v", msg)
