@@ -4,8 +4,8 @@
 
 ## Topics:
 
-1. [Variables](#Varaiables) Variables
-2. [Functions](#Functions) Functions
+1. [Variables](#Varaiables)
+2. [Functions](#Functions)
 
 ### Variables
 
