@@ -4,6 +4,7 @@
 
 1. [Variables](#Varaiables)
 2. [Functions](#Functions)
+3. [Loops](#Loops)
 
 ### Variables
 
@@ -31,16 +32,16 @@ fmt.Printf("Variable msg 2 => %v\n ", msg2)
 
 The result on the console will be:
 
-```sh
+```go
 Variable msg => Hellow world 1
-Variable msg 2 => Hello world 2
+Variable msg2 => Hello world 2
 ```
 
 ### Functions
 
 We use the keyword "func" in order to declare a function, followed by its name, arguments and the return type.
 
-```sh
+```go
 func Sum(arg1 int, arg2 int) int {
 	return arg1 + arg2
 }
@@ -50,7 +51,7 @@ Notice that the name of the function starts with a capital letter, this is done 
 
 The Sum function has 2 arguments of the same type, so we could declare them specifying the type once:
 
-```sh
+```go
 func Sum(arg1, arg2 int) int {
 	return arg1 + arg2
 }
@@ -58,7 +59,7 @@ func Sum(arg1, arg2 int) int {
 
 A function can return more than one type, including an error. Let's create a new function for dividing 2 numbers. As you know, we can not divide by zero, so we want to control that situation and to return an error:
 
-```sh
+```go
 func Divide(arg1, arg2 int) (int,error) {
 	if arg2 == 0 {
 		return errors.New("can not divide by 0"), 0
@@ -68,7 +69,21 @@ func Divide(arg1, arg2 int) (int,error) {
 }
 ```
 
-Returning and handling errors in Go is a little different from other languages, so it deserves a new discussion.
+Returning and handling errors in Go is a little different from other languages, so it deserves a new discussion. However, I show you how to call this simple function and handle the error in a basis way:
+
+```go
+division, err := functions.Divide(2, 0)
+
+if err != nil {
+	log.Fatal(err.Error())
+}
+
+fmt.Printf("Div => %v\n ", division)
+```
+
+### Loops
+
+In Go there are no while or do-while loops. It only gives us the traditional "for" loop.
 
 ## License
 
