@@ -69,7 +69,7 @@ func Divide(arg1, arg2 int) (int,error) {
 }
 ```
 
-Returning and handling errors in Go is a little different from other languages, so it deserves a new discussion. However, I show you how to call this simple function and handle the error in a basis way:
+Returning and handling errors in Go is a little different from other languages, so it deserves a new discussion. However, I will show you how to call this simple function and handle the error in a simple way:
 
 ```go
 division, err := functions.Divide(2, 0)
