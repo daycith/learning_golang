@@ -84,7 +84,3 @@ fmt.Printf("Div => %v\n ", division)
 ### Loops
 
 In Go there are no while or do-while loops. It only gives us the traditional "for" loop.
-
-## License
-
-MIT
