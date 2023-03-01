@@ -1,25 +1,23 @@
 package main
 
 import (
-	"fmt"
-	"log"
-
-	"github.com/daycith/learning_golang/functions"
-	"github.com/daycith/learning_golang/variables"
+	"github.com/daycith/learning_golang/loops"
 )
 
 func main() {
-	variables.UseVariables()
+	// variables.UseVariables()
 
-	sum := functions.Sum(1, 2)
+	// sum := functions.Sum(1, 2)
 
-	fmt.Printf("Sum => %v\n ", sum)
+	// fmt.Printf("Sum => %v\n ", sum)
 
-	division, err := functions.Divide(2, 0)
+	// division, err := functions.Divide(2, 1)
 
-	if err != nil {
-		log.Fatal(err.Error())
-	}
+	// if err != nil {
+	// 	log.Fatal(err.Error())
+	// }
 
-	fmt.Printf("Div => %v\n ", division)
+	// fmt.Printf("Div => %v\n ", division)
+
+	loops.RangeLoop()
 }

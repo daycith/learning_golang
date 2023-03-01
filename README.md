@@ -81,6 +81,69 @@ if err != nil {
 fmt.Printf("Div => %v\n ", division)
 ```
 
+As you can see, the onus is entirely on the caller to handle the error appropriately.
+
 ### Loops
 
-In Go there are no while or do-while loops. It only gives us the traditional "for" loop.
+_Go only gives us the traditional "for" loop_, which works like in Java and other programming languages. It uses three components:
+
+- The initialization, x := 0
+- The ending condition, x < 10
+- The iteration, x++
+
+Example:
+
+```go
+for x := 0; x < 10; x++ {
+	doSomethingWithX(x)
+}
+```
+
+In Go there are no while or do-while loops. However we can use the "for" loop instead of them.
+
+#### While
+
+We emulate a while loop when we skip the initialization and iteration sentences:
+
+```go
+x := 0
+for x < 10{
+	doSomethingWithX(x)
+	x++
+}
+```
+
+#### Do while
+
+We can emulate a do-while loop with one these 2 ways:
+
+```go
+x := 0
+for condition := true; condition; condition = x < 10{
+	doSomethingWithX(x)
+	x++
+}
+```
+
+```go
+x := 0
+for {
+	doSomethingWithX(x)
+	x++
+
+	if x == 10 {
+		break
+	}
+}
+```
+
+Another common use of for loop, is for looping over elements in arrays, maps and slices using __range__
+
+```go
+numbers := []int{0,1,2,3,4,5,6,7,8,9}
+for _, x := range numbers{
+	doSomethingWithX(x)
+}
+```
+
+If you did not know, we use _ to ignore a returned value from a function (like here), and to import libraries that we will not use directly, but our code needs them implicitly.
