@@ -151,7 +151,7 @@ If you did not know, we use _ to ignore a returned value from a function (like h
 
 #### Conditionals
 
-The if/else conditional works in go as in other languages. Maybe the most important thing to mention is that is nood mandatory to use brackets in the if condition:
+The if/else conditional works in go as in other languages. Maybe the most important thing to mention is that is not mandatory to use brackets in the if condition:
 
 ```go
 myNumber := 15
