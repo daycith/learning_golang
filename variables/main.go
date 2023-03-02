@@ -1,8 +1,8 @@
-package variables
+package main
 
 import "fmt"
 
-func UseVariables() {
+func main() {
 	var msg string
 	msg = "Hellow world 1"
 
