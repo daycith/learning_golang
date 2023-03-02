@@ -5,7 +5,7 @@
 1. [Variables](#Varaiables)
 2. [Functions](#Functions)
 3. [Loops](#Loops)
-4. [If/Else](#If/Else)
+4. [Conditionals](#Conditionals)
 
 ### Variables
 
@@ -149,7 +149,7 @@ for _, x := range numbers{
 
 If you did not know, we use _ to ignore a returned value from a function (like here), and to import libraries that we will not use directly, but our code needs them implicitly.
 
-#### If/Else
+#### Conditionals
 
 The if/else conditional works in go as in other languages. Maybe the most important thing to mention is that is nood mandatory to use brackets in the if condition:
 
