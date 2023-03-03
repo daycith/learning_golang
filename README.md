@@ -165,9 +165,9 @@ if myNumber % 2 == 0{
 
 ### Switch
 
-In Go, the switch is like most of other programming languages, except that you do not need to write the "break" if you do not want to execute the case that follows the case that is true. In other words, the break is provided automatically.
+In Go, the switch is like most of other programming languages, except that the break is provided automatically. 
 
-If you need the code to execute the case that follows the case that is true, then you can use the keyword "fallthrough".
+If you need to execute the case that follows the one that matches, then you can use the keyword "fallthrough".
 
 In the example below
 
@@ -204,4 +204,4 @@ Is weekend
 
 Since we have assigned 5 to the weekDay variable, the first printed text is "Is Friday". However, we have the keyword "fallthrough" in that switch case, so "Is weekend" is also printed.
 
-It is possible to evaluate several conditions in one single line. We just need to the write the list of values separated with comma. Such is the case of "6,7".
+It is possible to evaluate several conditions in one single line. We just need to indicate the list of values separated with comma. Such is the case of "6,7".
