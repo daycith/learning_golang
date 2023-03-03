@@ -4,5 +4,6 @@ use ./variables/
 use ./functions/
 use ./loops/
 use ./conditionals/
+use ./switches/
 
 

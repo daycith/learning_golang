@@ -6,6 +6,7 @@
 2. [Functions](#Functions)
 3. [Loops](#Loops)
 4. [Conditionals](#Conditionals)
+5. [Switch](#Switch)
 
 ### Variables
 
@@ -149,7 +150,7 @@ for _, x := range numbers{
 
 If you did not know, we use _ to ignore a returned value from a function (like here), and to import libraries that we will not use directly, but our code needs them implicitly.
 
-#### Conditionals
+### Conditionals
 
 The if/else conditional works in go as in other languages. Maybe the most important thing to mention is that is not mandatory to use brackets in the if condition:
 
@@ -161,3 +162,46 @@ if myNumber % 2 == 0{
 	fmt.Printf("The number %d is odd\n", myNumber)
 }
 ```
+
+### Switch
+
+In Go, the switch is like most of other programming languages, except that you do not need to write the "break" if you do not want to execute the case that follows the case that is true. In other words, the break is provided automatically.
+
+If you need the code to execute the case that follows the case that is true, then you can use the keyword "fallthrough".
+
+In the example below
+
+```go
+weekDay := 5
+
+	switch weekDay {
+	case 1:
+		fmt.Println("Is Monday")
+	case 2:
+		fmt.Println("Is Tuesday")
+	case 3:
+		fmt.Println("Is Wednesday")
+	case 4:
+		fmt.Println("Is Thursday")
+	case 5:
+		fmt.Println("Is Friday")
+		fallthrough
+	case 6, 7:
+		fmt.Println("Is weekend")
+
+	default:
+		fmt.Println("Invalid day")
+
+	}
+```
+
+The result will be
+
+```sh
+Is Friday
+Is weekend
+```
+
+Since we have assigned 5 to the weekDay variable, the first printed text is "Is Friday". However, we have the keyword "fallthrough" in that switch case, so "Is weekend" is also printed.
+
+It is possible to evaluate several conditions in one single line. We just need to the write the list of values separated with comma. Such is the case of "6,7".
